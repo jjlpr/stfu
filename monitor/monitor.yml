@@ -1,0 +1,6 @@
+monitor_file: ../output.json
+buffer_length: 3
+noisy_start: 123
+noisy_end: 100
+rate_limit_ms: 5000
+trigger_command: echo 'trigger!'
