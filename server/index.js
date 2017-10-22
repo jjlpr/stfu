@@ -58,6 +58,7 @@ function getData(start, end) {
         } catch(e) {
           return false;
         }
+        return false;
       }).join(',');
       resolve(`[${rtn}]`);
     })
