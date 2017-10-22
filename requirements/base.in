@@ -1,4 +1,4 @@
 click
 ipython
+numpy
 pip-tools
-scipy
