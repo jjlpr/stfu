@@ -8,8 +8,8 @@ venv/bin/pip-sync: venv
 
 .PHONY: install
 install: venv venv/bin/pip-sync
-	venv/bin/pip-sync requirements.txt
+	venv/bin/pip-sync requirements/base.txt
 
-.PHONY: requirements
-requirements: venv/bin/pip-compile
-	venv/bin/pip-compile requirements.in
+.PHONY: install-test
+install-test: venv venv/bin/pip-sync
+	venv/bin/pip-sync requirements/test.txt
