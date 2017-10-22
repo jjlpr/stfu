@@ -1,7 +1,8 @@
 import os
 
 import numpy
-from scipy.io import wavfile
+
+from .wavfile import read as wavfile_read
 
 
 def wav_to_stats(wav_file):
@@ -14,7 +15,7 @@ def wav_to_stats(wav_file):
         tuple (int, int): Average and max absolute volumes returned from the
             wav file.
     """
-    data = wavfile.read(wav_file)[1]
+    data = wavfile_read(wav_file)[1]
     data = numpy.absolute(data)
 
     return int(numpy.round(numpy.average(data))), data.max()
