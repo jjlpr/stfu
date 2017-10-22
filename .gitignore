@@ -1,1 +1,9 @@
-/venv/
+# From https://github.com/github/gitignore/blob/master/Python.gitignore
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.cache
+
+venv/
