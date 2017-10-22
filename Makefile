@@ -1,5 +1,5 @@
 venv:
-	virtualenv venv --python=python3
+	python3 -m virtualenv venv --python=python3
 	venv/bin/pip install -U pip
 
 venv/bin/pip-compile: venv
