@@ -40,8 +40,11 @@ app.listen(8000, ()=>{console.log('new express')})
 
 
 function getData(start, end) {
-  // todo convert to seconds
-  const lines = lastTimeStamp - start;
+
+  // lines is number of seconds from the last timestamp.
+  // we get these lines form the bottom of the input file
+  // then filter out any that are not in range
+  const lines = Math.max(0, Math.floor( (lastTimeStamp - start) / 1000 ));
   return new Promise( resolve => {
     readLastLines.read(filePath, lines).then( lines=> {
 
