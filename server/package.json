@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "stfu webserver",
+  "main": "index.js",
+  "repository": "https://github.com/jjlpr/stfu",
+  "author": "Some looser",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "read-last-lines": "^1.2.0",
+    "ws": "^3.2.0"
+  }
+}
