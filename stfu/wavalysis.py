@@ -1,3 +1,4 @@
+import datetime
 import os
 
 import numpy
@@ -33,4 +34,5 @@ def wav_to_json(wav_file):
     wav_av, wav_max = wav_to_stats(wav_file)
     wav_filename = os.path.split(wav_file)[-1]
     time_str = wav_filename.split('.')[0]
-    return '{' + '"time":{},"av":{},"max":{}'.format(time_str, wav_av, wav_max) + '}'
+    human_time = datetime.datetime.utcfromtimestamp(int(time_str)/1000)
+    return '{' + '"time":{},"htime":"{}","av":{},"max":{}'.format(time_str, human_time, wav_av, wav_max) + '}'
